@@ -1,0 +1,162 @@
+/* Navbar.css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.logo{
+  height: 50px;
+  width: 170px;
+  background-color: rgb(240, 248, 255);
+  border-radius: 10px;
+  
+}
+.Sub-nav,
+.form,
+.tax {
+  position: absolute;
+  text-align: start;
+  background-color: #00223e;
+  flex-direction: column;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 2;
+}
+.form
+{
+  left: 132px;
+  top: 0;
+  width: max-content;
+}
+.tax{
+  right: 132px;
+  top: 46px;
+  width: max-content;
+}
+
+.Sub-nav li:hover{
+  background-color: #3877aa81;
+}
+.Services:hover .Sub-nav,
+.Individuals:hover .form,
+.Businesses:hover .tax {
+  display: flex;
+  opacity: 1;
+}
+
+.navbar {
+  background: linear-gradient(to right, #1d526e, #022b4d);
+  color: white;
+  font-size: 1.3rem;
+  padding: 10px;
+  display: grid;
+  width: 100%;
+  align-items: center;
+  grid-template-columns: 5rem 1fr 0.5fr 1fr 5rem;
+  position: fixed;
+  z-index: 100;
+  
+}
+
+.nav-logo {
+  grid-column: 2/3;
+}
+
+.nav-link ul {
+  display: flex;
+  justify-content: space-between;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+.nav-link ul li {
+  padding: 10px;
+}
+
+.material-symbols-outlined {
+  display: none;
+  cursor: pointer;
+}
+
+.nav-link ul li {
+  list-style: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Responsive styles */
+@media (max-width: 1000px) {
+  .material-symbols-outlined {
+    display: block;
+    grid-column: 5/6;
+  }
+
+  .nav-link {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 1;
+  }
+
+  .nav-link span {
+    padding: 10px;
+  }
+
+  .menu-visible {
+    display: block;
+    flex-direction: column;
+  }
+
+  .menu-visible li:hover {
+    background-color: rgba(0, 0, 0, 0.298);
+    width: 100%;
+    text-align: end;
+  }
+
+  .Sub-nav,
+  .form,
+  .tax {
+    background-color: rgba(69, 68, 68, 0.107);
+    max-width: 0;
+    transition: max-width 0.3s ease-in-out;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    top: 100%;
+  }
+
+  .tax,
+  .form {
+    left: 0;
+    text-align: left;
+  }
+
+  .Services:hover .Sub-nav,
+  .Individuals.active .form,
+  .Businesses.active .tax {
+    max-width: 100%;
+    display: flex;
+    position: relative;
+  }
+
+  .Indi .form,
+  .Bus .tax {
+    max-width: 100%;
+    display: flex;
+   
+  }
+
+  .nav-link ul {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}

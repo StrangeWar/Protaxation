@@ -1,0 +1,25 @@
+.for{
+    background-color: white;
+    display: flex;
+    color: black;
+    margin: 0 50px;
+    align-items: center;
+    column-gap: 15px;
+    padding: 15px;
+    font-size: 1.2rem;
+    background-color: rgba(172, 178, 213, 0.805);
+    width: 50%;
+    margin:  25px 20px; 
+    box-shadow: 2px 3px 10px black;
+    border-radius: 30px;
+
+}
+.for:hover{
+    background-color: rgba(149, 159, 212, 0.805);
+}
+.m{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
