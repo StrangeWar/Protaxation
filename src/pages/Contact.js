@@ -17,8 +17,7 @@ export default function Contact(){
         <img src={whatsapp}/>+1 209-200-4304
         </div></a>
         <div className='for'>
-        <img src={email} width={35}/>rishi@protaxation.net
-        <img src={email} width={35}/>rishi@protaxation.net
+        <img src={email} width={35}/>rishi@protaxations.com
         </div>
         <div className='for'>
             <img src={location}/>4795 Commercial Drive
