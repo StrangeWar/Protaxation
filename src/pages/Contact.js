@@ -18,6 +18,7 @@ export default function Contact(){
         </div></a>
         <div className='for'>
         <img src={email} width={35}/>rishi@protaxation.net
+        <img src={email} width={35}/>rishi@protaxation.net
         </div>
         <div className='for'>
             <img src={location}/>4795 Commercial Drive
