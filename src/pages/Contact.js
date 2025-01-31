@@ -10,13 +10,13 @@ export default function Contact(){
         <div className='m'>
         <div className='for'>
 
-        <img src={whatsapp}  />+1 607-295-1196
+        <img src={whatsapp}  />+1 607-564-5355
         </div>
         <div className='for'>
-        <img src={whatsapp}/>+1 209-200-4304
+        <img src={whatsapp}/>+1 213-799-4574
         </div>
         <div className='for'>
-        <img src={email} width={35}/>rishi@protaxation.net
+        <img src={email} width={35}/>rishi@protaxations.com / saanvi@protaxations.com
         </div>
         <div className='for'>
             <img src={location}/>4795 Commercial Drive,
