@@ -2,12 +2,6 @@
 import './Navbar.css';
 import React, { useState } from 'react';
 import { Link, Routes, Route } from 'react-router-dom';
-import Form2555 from '../pages/Form 2555.js';
-import Home from '../pages/Home.js';
-import Contact from '../pages/Contact.js';
-import Form1040 from '../pages/Form1040';
-import Foreign from '../pages/foreign';
-import Tax from '../pages/Corporate tax';
 import LOGO from '../asset/LOGO-removebg.png'
 const Navbar = () => {
   let [isMenuOpen, setMenuOpen] = useState(false);
@@ -18,21 +12,22 @@ const Navbar = () => {
   let [isIndividualsOpen, setIndividualsOpen] = useState(false);
   let toggleIndividuals = () => {
     setIndividualsOpen(!isIndividualsOpen);
-
+    // Close the Businesses section when opening Individuals
+    setBusinessesOpen(false);
   };
 
-  let [isBusinessesOpen, setBusinessesOpen] = useState(false);
-  let toggleBusinesses = () => {
-    setBusinessesOpen(!isBusinessesOpen);
-   
-  };
+ let [isBusinessesOpen, setBusinessesOpen] = useState(false);
+ let toggleBusinesses = () => {
+  setBusinessesOpen(!isBusinessesOpen);
+  // Close the Individuals section when opening Businesses
+  setIndividualsOpen(false);
+};
 let menu =()=>{
   isIndividualsOpen=false;
   setIndividualsOpen(isIndividualsOpen);
   isBusinessesOpen=false;
   setBusinessesOpen(isBusinessesOpen);
 }
-
   return (
     <div className="navbar">
       <div className="nav-logo"> <img src={LOGO} alt="Logo" className='logo' /> </div>
@@ -59,7 +54,7 @@ let menu =()=>{
                 </ul>
               </li>
               <li className={`Businesses ${isBusinessesOpen ? 'active' : ''}`}>
-                <span onClick={()=>{toggleBusinesses(); }}>+ Businesses</span>
+                <span onClick={toggleBusinesses}>+ Businesses</span>
                 <ul className="tax">
                   <li><Link to={'./pages/Corporate tax'} onClick={()=>{toggleBusinesses(); handleMenuToggle()}}>- Corporate tax</Link></li>
                 </ul>
